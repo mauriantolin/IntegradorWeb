@@ -1,0 +1,285 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@100;300;500;800&display=swap');
+
+/* Setting all font sizes */
+:root {
+    --big-font-size: 2em;
+    --h2-font-size: 1.25em;
+    --h3-font-size: 1.155em;
+    --normal-font-size: .925em;
+    --small-font-size: .853em;
+    --smaller-font-size: .8em;
+}
+
+/* Setting all page's colors */
+:root {
+    --slider-color: rgb(16, 16, 16);
+    --back-color: rgb(234, 234, 234);
+    --back-second: rgb(243, 243, 195);
+    --color-btn: rgb(212, 180, 71);
+    --first-color: rgb(242, 213, 108);
+    --font-stroke-color: rgb(181, 145, 35);
+    --font-black: rgb(0, 0, 0); 
+}
+
+/* Setting all font's weigths */
+:root {
+    --font-bold: 800;
+    --font-med: 500;
+    --font-small: 300;
+    --font-smaller: 100;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* Animation of an object appearing as a lung breathing :) */
+@keyframes appear-breath {
+    0% {
+        opacity: 0;
+        transform: scale(95%);
+    }
+    16% {
+        opacity: .05;
+        transform: scale(100%);
+    }
+    33% {
+        opacity: .15;
+        transform: scale(95%);
+    }
+    50% {
+        opacity: .35;
+        transform: scale(100%);
+    }
+    66% {
+        opacity: .65;
+        transform: scale(95%);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(100%);
+    }
+}
+
+@keyframes header-animation {
+    0% {
+        opacity: 0;
+        transform: translate(0,-400%);
+    }
+    100% {
+        opacity: .7;
+        transform: translate(0,0);
+    }
+}
+
+@keyframes elipse {
+    0% {
+        translate: (0,0);
+    }
+    50% {
+        translate: (10%,30%);
+    }
+    100% {
+        translate: (0,-10%);
+    }
+}
+
+body {
+    font-family: "Archivo", sans-serif;
+    font-size: var(--normal-font-size);
+    color: var(--font-black);
+    background-color: var(--back-color);
+    margin: 2em 0 0 0;
+    overflow-x: hidden;
+}
+
+section {
+    width: 100%;
+    height: 100vh;
+}
+
+.slider {
+    background-color: var(--slider-color);
+    height: 100vh;
+    width: 100vh;
+    z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transform: translate(0, -200%);
+    transition: transform 1.1s linear 1.85s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.slider__logo {
+    opacity: 0;
+    width: 100px;
+    height: auto;
+    animation: appear-breath 2s ease-in .5s;
+    border-radius: 5px;
+}
+
+.elipse-light {
+    position: absolute;
+    z-index: -1;
+    width: 150vh;
+    height: 1300px;
+    left: -600px;
+    top: -500px;
+    background: radial-gradient(33.91% 33.91% at 49.96% 50.04%, rgb(246, 193, 153) 0%, rgba(167, 106, 255, 0) 100%);
+    filter: blur(99.5px);
+    animation: elipse 3s infinite;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    margin-top: 30px;
+    padding: 0 65px;
+    animation: header-animation 2s linear .25s;
+    /* margin-top: 20px; */
+}
+
+#logo--black {
+    width: 50px;
+    border-radius: 5px;
+    /* filter: invert(1); */
+}
+
+.navbar__menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#menu__checkbox {
+    display: none;
+}
+
+.menu__hamb {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: var(--color-btn);
+    cursor: pointer;
+}
+
+.hamb__line {
+    position: relative;
+    height: 2px;
+    width: 30px;
+    background-color:var(--font-black);
+    transition: all .5s ease-in-out;
+}
+
+.hamb__line::before, .hamb__line::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: var(--font-black);
+    transition: all .5s ease-in-out;
+}
+
+.hamb__line::before {
+    top: -10px;
+}
+
+.hamb__line::after {
+    top: 10px;
+}
+
+.menu__list {
+    display: none;
+}
+
+#menu__checkbox:checked ~ .menu__hamb .hamb__line {
+    transform: rotate(45deg);
+    transition: all .5s ease-in-out;
+}
+
+
+#menu__checkbox:checked ~ .menu__hamb .hamb__line::before, #menu__checkbox:checked ~ .menu__hamb .hamb__line::after {
+    transform: rotate(90deg);
+    top: 0;
+    transition: all .5s ease-in-out;
+    height: 2px;
+}
+
+.main-layer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-layer__vision {
+    position: absolute;
+    top: 55px;
+    right: 170px;
+    font-size: var(--h2-font-size);
+    font-weight: var(--font-small);
+}
+
+.main-layer__vision span {
+    color: var(--first-color);
+}
+
+.main-layer__title {
+    font-size: var(--big-font-size);
+    color:var(--font-stroke-color) ;
+    font-weight: var(--font-med);
+    font-family: Archivo, sans-serif;
+    transition: all .25s;
+}
+
+.main-layer__banner {
+    width: 30%;
+    min-width: 350px;
+    height: auto;
+}
+
+.title__span {
+    color:var(--font-black) ;
+    transition: all .25s;
+}
+
+.title__span:nth-child(2):after {
+    position: absolute;
+    padding-left: 5px;
+    width: 1000px;
+    content: ' la tenemos nosotros.';
+    color: var(--font-stroke-color);
+    display: none;
+    transition: all .25s;
+}
+/* 
+.main-layer__title:hover{
+    color: transparent;
+    transition: color .25s;
+
+    .title__span {
+        color: var(--font-stroke-color);
+        border-bottom: 3px solid var(--font-black);
+        transition: all .25s;
+        position: relative;
+    }
+
+    .title__span:nth-child(2):after {
+        display: inline-block;
+        transition: all .25s;
+    }
+}  */
