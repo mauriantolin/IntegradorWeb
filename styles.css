@@ -104,14 +104,14 @@ section {
 
 .slider {
     background-color: var(--slider-color);
-    height: 100vh;
-    width: 100vh;
+    height: 100%;
+    width: 100%;
     z-index: 100;
     position: fixed;
     top: 0;
     left: 0;
     transform: translate(0, -200%);
-    transition: transform 1.1s linear 1.85s;
+    transition: transform 1.25s linear 1.85s;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -123,6 +123,7 @@ section {
     height: auto;
     animation: appear-breath 2s ease-in .5s;
     border-radius: 5px;
+    z-index: 101;
 }
 
 .elipse-light {
@@ -220,6 +221,7 @@ section {
 }
 
 .main-layer {
+    padding: 0 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -227,6 +229,7 @@ section {
 }
 
 .main-layer__vision {
+    
     position: absolute;
     top: 55px;
     right: 170px;
@@ -239,6 +242,8 @@ section {
 }
 
 .main-layer__title {
+    max-width: 550px;
+    border: 1px solid red;
     font-size: var(--big-font-size);
     color:var(--font-stroke-color) ;
     font-weight: var(--font-med);
@@ -262,24 +267,22 @@ section {
     padding-left: 5px;
     width: 1000px;
     content: ' la tenemos nosotros.';
-    color: var(--font-stroke-color);
+    color: var(--font-black);
     display: none;
     transition: all .25s;
 }
-/* 
+
 .main-layer__title:hover{
     color: transparent;
     transition: color .25s;
+}
+.main-layer__title:hover ~ .title__span {
+    border-bottom: 3px solid var(--font-stroke-color);
+    transition: all .25s;
+    position: relative;
+}
 
-    .title__span {
-        color: var(--font-stroke-color);
-        border-bottom: 3px solid var(--font-black);
-        transition: all .25s;
-        position: relative;
-    }
-
-    .title__span:nth-child(2):after {
-        display: inline-block;
-        transition: all .25s;
-    }
-}  */
+.main-layer__title:hover ~ .title__span:nth-child(2):after {
+    display: inline-block;
+    transition: all .25s;
+}
