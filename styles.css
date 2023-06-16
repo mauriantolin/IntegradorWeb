@@ -113,8 +113,8 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    transform: translate(0, -200%);
-    transition: transform 1.25s linear 1.85s;
+    /* transform: translate(0, -200%);
+    transition: transform 1.25s linear 1.85s; */
     /* animation: header-animation 2s linear .25s; */
 }
 
