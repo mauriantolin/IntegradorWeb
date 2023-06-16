@@ -43,7 +43,7 @@
         opacity: 0;
         transform: scale(95%);
     }
-    16% {
+    /* 16% {
         opacity: .05;
         transform: scale(100%);
     }
@@ -58,7 +58,7 @@
     66% {
         opacity: .65;
         transform: scale(95%);
-    }
+    } */
     100% {
         opacity: 1;
         transform: scale(100%);
@@ -110,20 +110,21 @@ section {
     position: fixed;
     top: 0;
     left: 0;
-    transform: translate(0, -200%);
-    transition: transform 1.25s linear 1.85s;
     display: flex;
     justify-content: center;
     align-items: center;
+    transform: translate(0, -200%);
+    transition: transform 1.25s linear 1.85s;
+    /* animation: header-animation 2s linear .25s; */
 }
 
 .slider__logo {
-    opacity: 0;
+    /* opacity: 0; */
     width: 100px;
     height: auto;
-    animation: appear-breath 2s ease-in .5s;
+    animation: appear-breath 1.125s ease-in;
     border-radius: 5px;
-    z-index: 101;
+    z-index: 100
 }
 
 .elipse-light {
@@ -133,9 +134,15 @@ section {
     height: 1300px;
     left: -600px;
     top: -500px;
-    background: radial-gradient(33.91% 33.91% at 49.96% 50.04%, rgb(246, 193, 153) 0%, rgba(167, 106, 255, 0) 100%);
+    background: radial-gradient(33.91% 33.91% at 49.96% 50.04%, rgb(241, 203, 174) 0%, rgba(167, 106, 255, 0) 100%);
     filter: blur(99.5px);
     animation: elipse 3s infinite;
+}
+
+.elipse-light:nth-child(2) {
+    left: auto;
+    right: -500px;
+    top: 500px;
 }
 
 .navbar {
@@ -147,8 +154,8 @@ section {
     top: 0;
     margin-top: 30px;
     padding: 0 65px;
-    animation: header-animation 2s linear .25s;
     /* margin-top: 20px; */
+    animation: header-animation 2s linear .25s;
 }
 
 #logo--black {
@@ -229,7 +236,6 @@ section {
 }
 
 .main-layer__vision {
-    
     position: absolute;
     top: 55px;
     right: 170px;
@@ -242,9 +248,9 @@ section {
 }
 
 .main-layer__title {
-    max-width: 550px;
-    border: 1px solid red;
-    font-size: var(--big-font-size);
+    text-align: center;
+    max-width: 900px;
+    font-size: 3em;
     color:var(--font-stroke-color) ;
     font-weight: var(--font-med);
     font-family: Archivo, sans-serif;
