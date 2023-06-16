@@ -41,24 +41,7 @@
 @keyframes appear-breath {
     0% {
         opacity: 0;
-        transform: scale(95%);
     }
-    /* 16% {
-        opacity: .05;
-        transform: scale(100%);
-    }
-    33% {
-        opacity: .15;
-        transform: scale(95%);
-    }
-    50% {
-        opacity: .35;
-        transform: scale(100%);
-    }
-    66% {
-        opacity: .65;
-        transform: scale(95%);
-    } */
     100% {
         opacity: 1;
         transform: scale(100%);
@@ -73,6 +56,20 @@
     100% {
         opacity: .7;
         transform: translate(0,0);
+    }
+}
+
+@keyframes slider-animation {
+    0% {
+        opacity: 1;
+        transform: translate(0,0);
+    }
+    50% {
+        transform: translate(0,0);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0,-200%);
     }
 }
 
@@ -103,6 +100,7 @@ section {
 }
 
 .slider {
+    opacity: 0;
     background-color: var(--slider-color);
     height: 100%;
     width: 100%;
@@ -113,9 +111,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* transform: translate(0, -200%);
-    transition: transform 1.25s linear 1.85s; */
-    /* animation: header-animation 2s linear .25s; */
+    animation: slider-animation 3s linear ;
 }
 
 .slider__logo {
@@ -155,7 +151,7 @@ section {
     margin-top: 30px;
     padding: 0 65px;
     /* margin-top: 20px; */
-    animation: header-animation 2s linear .25s;
+    animation: header-animation 2s linear .5s;
 }
 
 #logo--black {
@@ -251,7 +247,7 @@ section {
     text-align: center;
     max-width: 900px;
     font-size: 3em;
-    color:var(--font-stroke-color) ;
+    color:var(--font-black) ;
     font-weight: var(--font-med);
     font-family: Archivo, sans-serif;
     transition: all .25s;
@@ -264,31 +260,6 @@ section {
 }
 
 .title__span {
-    color:var(--font-black) ;
-    transition: all .25s;
-}
-
-.title__span:nth-child(2):after {
-    position: absolute;
-    padding-left: 5px;
-    width: 1000px;
-    content: ' la tenemos nosotros.';
-    color: var(--font-black);
-    display: none;
-    transition: all .25s;
-}
-
-.main-layer__title:hover{
-    color: transparent;
-    transition: color .25s;
-}
-.main-layer__title:hover ~ .title__span {
-    border-bottom: 3px solid var(--font-stroke-color);
-    transition: all .25s;
-    position: relative;
-}
-
-.main-layer__title:hover ~ .title__span:nth-child(2):after {
-    display: inline-block;
+    color:var(--font-stroke-color) ;
     transition: all .25s;
 }
