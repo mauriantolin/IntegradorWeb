@@ -33,20 +33,43 @@
 					<span class="hamb__line"></span>
 				</div>
 				<ul class="menu__list">
-					<li class="list__item"><a href="">NOSOTROS</a></li>
-					<li class="list__item"><a href="">MISIÓN</a></li>
-					<li class="list__item"><a href="">SERVICIOS</a></li>
-					<li class="list__item"><a href="">PROYECTOS</a></li>
-					<li class="list__item"><a href="">CONTACTO</a></li>
+					<li><a class="list__item" href="#main-layer">Inicio</a></li>
+					<li><a class="list__item" href="#about">Nosotros</a></li>
+					<li><a class="list__item" href="#cards">Servicios</a></li>
+					<li><a class="list__item" href="#contact">Contacto</a></li>
+					<li><a class="list__item" href="login.html">Login</a></li>
+					<li>
+						<a class="list__item" href="signup.html">Signup</a>
+					</li>
 				</ul>
 				<ul class="nav__list">
-					<li class="nav__item"><a href="">NOSOTROS</a></li>
-					<li class="nav__item"><a href="">MISIÓN</a></li>
-					<li class="nav__item"><a href="">SERVICIOS</a></li>
-					<li class="nav__item"><a href="">PROYECTOS</a></li>
-					<li class="nav__item"><a href="">CONTACTO</a></li>
+					<li><a class="nav__item" href="index.html">Inicio</a></li>
+					<li><a class="nav__item" href="login.html">Login</a></li>
+					<li><a class="nav__item" href="signup.html">Signup</a></li>
 				</ul>
 			</label>
 		</header>
+		<section id="login">
+			<h1 class="login__title">Para logearse ingrese sus datos aqui</h1>
+			<form class="login__form">
+				<label for="username">Usuario</label>
+				<input
+					type="text"
+					id="username"
+					name="username"
+					placeholder="Ingrese su usuario"
+				/>
+
+				<label for="password">Contraseña</label>
+				<input
+					type="password"
+					id="password"
+					name="password"
+					placeholder="Ingrese su contraseña"
+				/>
+
+				<input type="submit" value="Iniciar Sesión" />
+			</form>
+		</section>
 	</body>
 </html>
