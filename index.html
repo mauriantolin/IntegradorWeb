@@ -1,38 +1,180 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
-<body>
-    <div class="slider">
-        <img class="slider__logo" src="./assets/imseg.png" alt="">
-    </div>
-    <div class="elipse-light"></div>
-    <div class="elipse-light"></div>
-    <div class="elipse-light"></div>
-    <header class="navbar">
-        <a href="#index.html" class="navbar__logo">
-            <img id="logo--black" src="./assets/imseg.png" alt="">
-        </a>
-        <label for="menu__checkbox" class="navbar__menu">
-            <input type="checkbox" id="menu__checkbox">
-            <div class="menu__hamb">
-                <span class="hamb__line"></span>
-            </div>
-            <ul class="menu__list">
-                <li class="list__item">NOSOTROS</li>
-                <li class="list__item">MISIÓN</li>
-                <li class="list__item">SERVICIOS</li>
-                <li class="list__item">PROYECTOS</li>
-                <li class="list__item">CONTACTO</li>
-            </ul>
-        </label>
-    </header>
-    <section class="main-layer">
-        <p class="main-layer__vision">Lider en Seguridad Vial de <span> Argentina </span>- 2023</p>
-        <h2 class="main-layer__title">La mejor<span class="title__span"> solución tecnologica</span> para la gestión del riesgo en <span class="title__span">seguridad vial.</span></h2>
-        <img class="main-layer__banner" src="./assets/imseg_banner_png.png" alt="">
-    </section>
-
-</body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta
+			name="viewport"
+			content="width=
+    , initial-scale=1.0"
+		/>
+		<title>IMSEG</title>
+		<link rel="stylesheet" type="text/css" href="styles.css" />
+		<script src="script.js"></script>
+		<script
+			src="https://kit.fontawesome.com/32f4e45752.js"
+			crossorigin="anonymous"
+		></script>
+	</head>
+	<body>
+		<div class="slider">
+			<img class="slider__logo" src="./assets/imseg.png" alt="" />
+		</div>
+		<div class="elipse-light"></div>
+		<div class="elipse-light"></div>
+		<div class="elipse-light"></div>
+		<header class="navbar">
+			<a href="#index.html" class="navbar__logo">
+				<img id="logo--black" src="./assets/imseg.png" alt="" />
+			</a>
+			<label for="menu__checkbox" class="navbar__menu">
+				<input type="checkbox" id="menu__checkbox" />
+				<div class="menu__hamb">
+					<span class="hamb__line"></span>
+				</div>
+				<ul class="menu__list">
+					<li class="list__item"><a href="">NOSOTROS</a></li>
+					<li class="list__item"><a href="">MISIÓN</a></li>
+					<li class="list__item"><a href="">SERVICIOS</a></li>
+					<li class="list__item"><a href="">PROYECTOS</a></li>
+					<li class="list__item"><a href="">CONTACTO</a></li>
+				</ul>
+				<ul class="nav__list">
+					<li class="nav__item"><a href="">NOSOTROS</a></li>
+					<li class="nav__item"><a href="">MISIÓN</a></li>
+					<li class="nav__item"><a href="">SERVICIOS</a></li>
+					<li class="nav__item"><a href="">PROYECTOS</a></li>
+					<li class="nav__item"><a href="">CONTACTO</a></li>
+				</ul>
+			</label>
+		</header>
+		<section class="main-layer">
+			<a class="main-layer__powerbi">
+				<img
+					src="./assets/imseg-pbi.png"
+					alt=""
+					class="powerbi__dashboard"
+				/>
+			</a>
+			<a class="main-layer__powerbi">
+				<img
+					src="./assets/imseg-pbimapa.png"
+					alt=""
+					class="powerbi__dashboard"
+				/>
+			</a>
+			<p class="main-layer__vision">
+				Lider en Seguridad Vial de <span> Argentina </span>- 2023
+			</p>
+			<h2 class="main-layer__title">
+				Tu mejor<span class="title__span"> solución</span> para la
+				<span class="title__span">seguridad vial.</span>
+			</h2>
+			<img
+				class="main-layer__banner"
+				src="./assets/imseg_banner_png.png"
+				alt=""
+			/>
+		</section>
+		<section class="about">
+			<div class="about__title-container">
+				<h2 class="about__title">CONTROLAR</h2>
+				<h2 class="about__title">ANALIZAR</h2>
+				<h2 class="about__title">MITIGAR</h2>
+				<h2 class="about__title">PREVENIR</h2>
+				<p class="about__title-descrp">
+					Esta es la solución que brindamos.
+				</p>
+			</div>
+			<div class="about__career">
+				<h3 class="career__title">Nuestra Trayectoria</h3>
+				<p class="career__descrp">
+					Nosotros crecimos con el objetivo de llegar a 0 siniestros
+					viales, teniendo en cuenta lo utopico de esto. Pero todos
+					nuestros procesos son los ideales para poder llegar a
+					lograrlo en algun momento. Gracias a nuestros equipos
+					de<span> Especialistas en Seguridad Vial </span>esto es mas
+					que posible.
+				</p>
+			</div>
+		</section>
+		<section class="cards">
+			<h2 class="cards__title">Nuestros Servicios</h2>
+			<div class="cards__container">
+				<div class="card">
+					<i class="fa-solid fa-map-location"></i>
+					<h3 class="card__service">Trazabilidad</h3>
+					<p class="card__descrp">
+						Te ayudamos a llevar toda la geolocalizacion de la
+						logistica en todo momento!
+					</p>
+					<img
+						class="card__image"
+						src="./assets/servicios1.png"
+						alt=""
+					/>
+				</div>
+				<div class="card">
+					<i class="fa-solid fa-chart-line"></i>
+					<h3 class="card__service">Analisis de Datos</h3>
+					<p class="card__descrp">
+						Mensualmente realizamos reuniones 1:1 para poder darte a
+						conocer como es el rendimiento de tu flota en el ultimo
+						mes.
+					</p>
+					<img
+						class="card__image"
+						src="./assets/servicios2.png"
+						alt=""
+					/>
+				</div>
+				<div class="card">
+					<i class="fa-solid fa-file-excel"></i>
+					<h3 class="card__service">Reportes</h3>
+					<p class="card__descrp">
+						Somos los primeros en poder lograr la integracion con
+						cualquier GPS, y mediante nuestra plataforma crear todo
+						tipo de reportes.
+					</p>
+					<img
+						class="card__image"
+						src="./assets/servicios3.png"
+						alt=""
+					/>
+				</div>
+			</div>
+		</section>
+		<section class="contact">
+			<div class="contact__time">
+				<img class="time__image" src="./assets/sayhi-gif.gif" alt="" />
+				<div class="time__info">
+					<p class="time__name">Mauricio Antolin.</p>
+					<p class="time__descrp">
+						Nuestro mejor Analista en progreso...
+					</p>
+				</div>
+			</div>
+			<div class="contact__card">
+				<h3 class="contact__title">CONTACTANOS!</h3>
+				<p class="contact__descrp">
+					Dejanos tu consulta y te responderemos a la brevedad. Si
+					quieres trabajar con nosotros tambien puedes enviarnos tu
+					CV.
+				</p>
+				<div class="contact__info">
+					<p class="info__greeting">Animate</p>
+					<a href="#" class="info__mail">mantolin@imseg.com</a>
+				</div>
+			</div>
+		</section>
+		<footer>
+			<p>Made with < 3 by Mauri</p>
+			<ul class="footer__link">
+				<li class="link__item"><a href="">Github</a></li>
+				<li class="link__item"><a href="">Linkedin</a></li>
+				<li class="link__item"><a href="">Discord</a></li>
+			</ul>
+			<p>© 2023. All Rights Reserved.</p>
+		</footer>
+	</body>
 </html>
