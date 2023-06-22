@@ -1,13 +1,3 @@
-const funcionEsPrimo = (numero) => {
-	let esPrimo = true;
-	for (let i = 2; i < numero; i++) {
-		if (numero % i === 0) {
-			esPrimo = false;
-		}
-	}
-	return esPrimo;
-};
-
 // {
 //   "explorer.confirmDelete": false,
 //   "eslint.codeActionsOnSave.rules": null,
